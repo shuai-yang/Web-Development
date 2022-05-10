@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= 'Sharon\'s Blogging Engine' 
+    h1= 'Sharon\'s Blogging Engine'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    .topnav
+      a(href='/') Home
+      a(href='/articles/new') Create Post
+  body
+    div
+      each article in articles
+        .blogborder
+          div
+            h3 Title: #{article.title}
+          .blogdescription Text: #{article.description}
+          //-br
+          //-.blogtag Tag: #{article.markdown}
+          //-br
+          //-.blogCreatedDate #{article.createdAt.toLocaleDateString()}
+          //-a(href=`articles/${article.slug}`) Read More
+          a.link(href=`articles/edit/${article.id}`) Edit
+          form(action=`/articles/${article.id}?_method=DELETE` method='POST')
+            button.delete(type='submit') Delete
+      

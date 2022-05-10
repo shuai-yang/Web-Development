@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= 'Sharon\'s Blogging Engine' 
+    h1= 'Sharon\'s Blogging Engine'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    .topnav
+      a(href='/') Home
+      a(href='/articles/new') Create Post
+  body
+    div
+          h3 Edit Post
+          form(action=`/articles/${article.id}?_method=PUT` method='POST')
+            div
+            label(for='title') Title:
+            input(required='' value=article.title type='text' name='title' size='50' placeholder='Type here...')
+            br
+            div
+                label(for='description') Text:
+                textarea(name='description' rows='10' cols='50' placeholder='Type here...') #{article.description}
+            //-div
+                label(for='markdown') Tag
+                textarea(name='markdown') #{article.markdown}
+            br
+            button(type='submit') Save

@@ -1,0 +1,10 @@
+extends layout
+block content
+  div
+    h3  The post "#{article.title}" was just added or updated!
+    h3
+      | To view 
+      a(href='/') All Blogs
+      |   or go back to 
+      a(href=`/articles/edit/${article.id}`) Edit 
+      |   this blog.

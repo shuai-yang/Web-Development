@@ -1,0 +1,27 @@
+//-The 302 status code is a redirection message that occurs when a resource or page you're attempting to load has been temporarily moved to a different location
+//-An HTTP 304 not modified status code means that the website you're requesting hasn't been updated since the last time you accessed it. 
+doctype html
+html
+  head
+    title= 'Sharon\'s Blogging Engine' 
+    h1= 'Sharon\'s Blogging Engine'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    .topnav
+        a(href='/') Home
+        a(href='/articles/new') Create Post
+  body
+    div
+      h3 New Post
+      form(action='/articles' method='POST')  
+        div
+            label(for='title') Title:
+            input(required='' value=article.title type='text' name='title' size='50' placeholder='Type here...')
+        br
+        div
+            label(for='description') Text:
+            textarea(name='description' rows='10' cols='50' placeholder='Type here...') #{article.description}
+        //-div
+            label(for='markdown') Tag
+            textarea(name='markdown') #{article.markdown}
+        br
+        button(type='submit') Save

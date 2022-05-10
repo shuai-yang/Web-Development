@@ -1,0 +1,65 @@
+
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url("/images/river_view.webp");
+    background-size: 100% auto;
+    font-size: 1.5em;
+}
+
+.topnav{
+    background-color: black;
+    overflow: hidden;
+}
+
+.topnav a {
+    display: inline;
+    margin: 30px;
+    color: #f2f2f2;
+    font-size: 23px;
+}
+
+a:hover{
+    color: red;
+}
+
+h3{
+    font-size: 22px;
+}
+
+button{
+    background-color: aqua;
+}
+
+.link{
+    display: inline;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.links a.hover {
+    color: red;
+}
+
+.blogborder{
+    border-style:groove;
+}
+
+.blogdescription{
+    font-size: 17px;
+}
+
+.blogtag{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.blogCreatedDate{
+    font-size: 12px;
+}
+
+/*.readmore{
+    display:inline;
+    margin-right: 10px;
+    color:purple;
+}*/

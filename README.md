@@ -1,5 +1,5 @@
 This JavaScript application performs CRUD(Create, Read, Update, and Delete) operations for blog posts.
-It was built from scratch purly with NodeJS, Express and my own custom style sheet without using bootstrap or any prebuilt framework such as React.
+It was built from scratch purely with NodeJS, Express and my own custom style sheet without using bootstrap or any prebuilt framework such as React.
 It interacts with a MongoDB to store and retrieve data.
 
 ## How to run this website
